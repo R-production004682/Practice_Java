@@ -1,9 +1,0 @@
-import java.io.BufferedReader;
-
-public class Sample_03
-{
-	public void main(String[] ages)
-	{
-		BufferReader br = new BufferReader(new );
-	}
-}
