@@ -1,0 +1,13 @@
+import java.io.InputStreamReader;
+
+
+public class Sample_03
+{
+	public void main(String[] ages)
+	{
+		BufferReader br = new BufferReader(new InputStreamReader(System.in));
+		
+		int x = Integer.parseInt(br.readLine());
+		int y = Integer.parseInt(be.readLine());
+	}
+}

@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public  class Sample_03
+{
+ 	 public static void main(String[] ages) throws IOException
+	{
+ 		 //3_1==============================
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int x = Integer.parseInt(br.readLine());
+//		int y = Integer.parseInt(br.readLine());
+//		
+//		if(x > y)
+//		{
+//			System.out.print("XはYより大きい");
+//		}
+//		br.close();
+ 		 
+ 		 //3_2==============================
+ 		 
+ 		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ 		 
+ 		 int x = Integer.parseInt(br.readLine());
+ 		int y = Integer.parseInt(br.readLine());
+ 		
+ 		if(x > y ) { System.out.print(x); }
+ 		else {System.out.print(y); }
+ 		
+ 		br.close();
+ 		 
+	}
+}
