@@ -211,6 +211,22 @@ public class Sample_04
 //		br.close();
 		
 		//練習問題4-15 : 明日はここからやる
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int number = Integer.parseInt(br.readLine());
+//		int n;
+//		
+//		//素数を求める
+//		for(n = 2; n <= (number / 2); n++ )
+//		{
+//				if((number % n) == 0) {break;}
+//		}
+//		
+//		if(n > (number / 2)) {System.out.print(number + "は素数です。")      ;}
+//		else 						  {System.out.print(number + "は素数じゃない。");}
+		
+		//練習問題4-15
+		
 		
 	}
 }
