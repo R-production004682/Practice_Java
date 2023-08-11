@@ -212,11 +212,11 @@ public class Sample_04
 		
 		//練習問題4-15 : 明日はここからやる
 //		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		
-//		int number = Integer.parseInt(br.readLine());
+//	
+//	    int number = Integer.parseInt(br.readLine());
 //		int n;
 //		
-//		//素数を求める
+//		//素数かどうかの判定
 //		for(n = 2; n <= (number / 2); n++ )
 //		{
 //				if((number % n) == 0) {break;}
@@ -225,8 +225,110 @@ public class Sample_04
 //		if(n > (number / 2)) {System.out.print(number + "は素数です。")      ;}
 //		else 						  {System.out.print(number + "は素数じゃない。");}
 		
-		//練習問題4-15
+		//練習問題4-16
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		int inputNum = Integer.parseInt(br.readLine());
+//		
+//		//素数の計算過程を表示
+//		for(var n = 2; inputNum > 1; n++)
+//		{
+//			while((inputNum % n) == 0)
+//			{
+//				System.out.print(n + " , ");
+//				inputNum /= n;
+//			}
+//	    }
 		
+		//練習問題4-17
+		
+//		九九
+//		for(var i = 1; i <= 9; i++)
+//		{
+//			for(var j = 1; j <= 9; j++)
+//			{
+//				System.out.printf("%2d", i * j);
+//			}
+//			System.out.print("\n");
+//		}
+		
+		//練習問題4-18
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		int num = 0;
+//		
+//		for( ; ;)
+//		{
+//			var value = Integer.parseInt(br.readLine());
+//			if(value == 0) {break;}
+//			
+//			num += value;
+//		}
+//		
+//		System.out.print("入力した総和 : " + num);
+		
+		//練習問題4-19
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		int num = 0;
+//		int counter = 0;
+//		
+//		for( ; ;)
+//		{
+//			var value = Integer.parseInt(br.readLine());
+//			if(value == 0) {break;}
+//			
+//			num += value;
+//			
+//			counter++;
+//		}
+//		
+//		System.out.print("経過ターン : " + counter);
+//		
+//		System.out.print("入力した総和 : " + (num / counter));
+		
+		
+		
+		//練習問題4-20
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		int size = Integer.parseInt(br.readLine());
+//		
+//		final String symbol = "$";
+//		
+//		for(var i = 0; i < size; i++)
+//		{
+//			for(var j = 0; j <=  i; j++) {System.out.print(symbol);}
+//			
+//			System.out.print("\n");
+//		}
+		
+		//練習問題4-21
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		int size = Integer.parseInt(br.readLine());
+//		final String symbol = "X";
+//		
+//		for(var i = 0; i < size; i++)
+//		{
+//			for(var j = 0; j <= size;  j++) 
+//			{
+//				if(i == j || (size - i -1) == j) {System.out.print("X");}
+//				else									 {System.out.print(" ");}
+//			}
+//			
+//			System.out.print("\n");
+//		}
+		
+//		//練習問題4-22
+//		//フィボナッチ数列
+//		var number1 = 0;
+//		var number2 = 1;
+//		var number3 = number1 + number2;
+//		
+//		while(number1 <= 1000)
+//		{
+//			System.out.print(number1 + " , ");
+//			
+//			number1 = number2;
+//			number2 = number3;
+//			number3 = number1 + number2;
+//		}
 		
 	}
 }
