@@ -69,20 +69,87 @@ public class Sample_05
 //		for(var i = 0; i < cnt; i++) { System.out.print("\n" + nums[i]); }
 		
 		//練習問題5-5
-		BufferedReader br = new BufferedReader(
-        new InputStreamReader( System.in ) );
-		int value = Integer.parseInt( br.readLine() );
-
-		int binary[] = new int[16];
-
-		//配列 binaryに0か1を代入する
-		for( int i = 15 ; i >= 0 ; i--, value /= 2 )
-		    binary[i] = value % 2;
-
-		for( int i = 0 ; i < 16 ; i++ )
-		System.out.print( binary[i] ); 
+//		BufferedReader br = new BufferedReader(
+//        new InputStreamReader( System.in ) );
+//		int value = Integer.parseInt( br.readLine() );
+//
+//		int binary[] = new int[16];
+//
+//		//配列 binaryに0か1を代入する
+//		for( int i = 15 ; i >= 0 ; i--, value /= 2 )
+//		    binary[i] = value % 2;
+//
+//		for( int i = 0 ; i < 16 ; i++ )
+//		System.out.print( binary[i] ); 
 		
 		
-	}
+		//練習問題5-6
+//		BufferedReader br = new BufferedReader(new InputStreamReader( System.in ) );
+//		int kuku[][] = new int[9][];
+
+		//配列 kuku に値を代入する
+		
+//		for(var i = 0; i < 9; i++)
+//		{
+//			kuku[i] = new int[9];
+//			
+//			for(var j = 0; j < 9; j++)
+//			{
+//				kuku[i][j] = (i + 1) * (j + 1);
+//			}
+//		}
+//		
+//		for( int i = 0 ; i < 9 ; i++ )
+//		{
+//			for( int j = 0 ; j < 9 ; j++ ) 
+//			{
+//				System.out.printf( " %2d", kuku[i][j] );
+//			}
+//			
+//			System.out.println();
+//		}
+		
+		//練習問題5-7
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int kuku[][] = new int[9][9];
+//		
+//		for(var i = 0; i < 9; i++) 
+//			for(var j = 0; j < 9; j++)
+//			{
+//				kuku[i][j] = (i + 1) * (j + 1);
+//			}
+//			
+//		var num1 = Integer.parseInt(br.readLine());
+//		var num2 = Integer.parseInt(br.readLine());
+//		
+//		System.out.print(kuku[num1 - 1][num2 - 1]);
+		
+		//練習問題5-8
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int[] nums = new int[10];
+		
+		for(var i = 0; i < 10; i++)
+		{
+			nums[i] = Integer.parseInt(br.readLine());
+		}
+		
+		for(var i = 0; i < 10; i++)
+		{
+			for(var j = i + 1; j < 10; j++)
+			{
+				if(nums[i] > nums[j])
+				{
+					int returnI = nums[i];
+					   nums[i] = nums[j];
+					   nums[j] = returnI;
+				}
+			}
+		}
+		
+		for(int i = 0; i < 10; i++)
+			System.out.print(nums[i] + " ");
+		
+	}  	
 }
-    	
