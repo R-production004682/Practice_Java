@@ -8,74 +8,80 @@ public class Practice01 {
         // 入力パラメータを読み込む
         String 	input	  = br.readLine();
         String[] param = input.split(" ");//入力値を空白で分解する
-		
-        //足し算
-//        int num1 = Integer.parseInt(param[0]);
-//        int num2 = Integer.parseInt(param[1]);
-//        
-//        System.out.println(num1 + num2);
         
+        int sum = calc(param,0 , param.length - 1);
+        System.out.print(sum);
         
-        //四則演算
-//        int    num1 = Integer.parseInt(param[0]);
-//        String type = param[1];
-//        int    num2 = Integer.parseInt(param[2]);
-//        
-//        if     (type.equals("+")) {System.out.println(num1 + num2);}
-//        else if(type.equals("-")) {System.out.println(num1 - num2);}
-//        else if(type.equals("*")) {System.out.println(num1 * num2);}
-//        else if(type.equals("/")) {System.out.println("商" + num1  / num2 + "......余り : " + num1 % num2);}
-        
-        //四則演算-別解-
-//        int num1 = Integer.parseInt(param[0]);
-//        String type = param[1];
-//        int num2 = Integer.parseInt(param[2]);
-//        
-//        switch(type)
-//        {
-//	        case "+":
-//	        	System.out.println(num1 + num2);
-//	        break;
-//	        	
-//	        case "-":
-//	        	System.out.println(num1 - num2);
-//	        break;
-//	        	
-//	        case "*":
-//	        	System.out.println(num1 * num2);
-//	        break;
-//	        	
-//	        case "/":
-//	        	System.out.println("商" + num1 / num2 + ".......余り : " + num1 % num2);
-//	        break;
-//        	
-//        	default:
-//        		return;
-//        }
-        
-        
-        //繰り返し
-//        String type = null;
-//        int      sum = 0;
-//        
-//        for(int index = 0; index < param.length; index++)
-//        {
-//        	if(param[index].equals("+") || param[index].equals("-")) 
-//        	{
-//        		type = param[index]; 
-//        	}
-//        	else
-//        	{
-//        		int num = Integer.parseInt(param[index]);
-//        		
-//        		if(type != null) 
-//        		{
-//        			if      (type.equals("+")){sum += num;}
-//        			else if(type.equals("-")) {sum  -= num;}
-//        		}
-//        		else{sum   = num;}
-//        	}
-//        }
-//        System.out.println(sum);      
+    }
+    
+    public static int calc(String[] param , int startIndex , int endIndex)
+    {
+    	int sum = 0;
+    	String type = null;
+    	
+    	for(var index = 0; index < endIndex + 1; index++)
+    	{
+    		if(param[index].equals("+") || param[index].equals("-"))
+    		{
+    			type = param[index];//+か-だった時に、typeに格納しとく
+    		}
+    		else if(param[index].equals("("))
+    		{
+    			int endOfSymbol = CheckEndOfSymbol(param , index);
+    			
+    			if(type != null) 
+    			{
+    				if(type.equals("+")) {
+    					sum += calc(param , index + 1 , endOfSymbol - 1);
+    				}
+    				else if(type.equals("-"))
+    				{
+    					sum -= calc(param , index + 1 , endOfSymbol - 1);
+    				}
+    			}
+    			else
+    			{
+    				sum = calc(param , index + 1 , endOfSymbol - 1);
+    			}
+    			
+    			index = endOfSymbol;
+    		}
+    		else
+    		{
+    			int num = Integer.parseInt(param[index]);
+    			
+    			if(type != null) 
+    			{
+    				if(type.equals("+"))      {sum += num;}
+    				else if(type.equals("-")) {sum -= num;}
+    			}
+    			else
+    			{
+    				sum = num;
+    			}
+    		}
+    	}
+    	
+    	return sum;
+    }
+    
+    //『』の終わりを見つけるとこ
+    public static int CheckEndOfSymbol(String[] param , int startIndex)
+    {
+    	int end = startIndex + 1;
+    	int startCount = 0;
+    	
+    	for(var index= 0; index < param.length; index++)
+    	{
+    		end = index;
+    		
+    		if(param[index].equals("(")) { startCount++; }
+    		else if(param[index].equals(")")) 
+    		{
+    			if(startCount == 0) {break;}
+    			else 			  {startCount --;}
+    		}
+    	}
+    	return end;
     }
 }
