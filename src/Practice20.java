@@ -23,7 +23,6 @@ public class Practice20
         		System.out.print(arr[i][j]);
         	}
         }
-       
         
     }
 }
