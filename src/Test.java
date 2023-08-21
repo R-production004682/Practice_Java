@@ -1,64 +1,86 @@
-import java.math.BigInteger;
-
 public class Test
 {
-//	public static void main(String[] ages) throws NumberFormatException, IOException
-//	{
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		
-//		int inputNumber_User = Integer.parseInt(br.readLine());
-//		PrimeNumber(inputNumber_User);
-//		
-//		int mulNumber = Integer.parseInt(br.readLine());
-//		System.out.println(Mul(mulNumber));
-//	}
-//	
-//	//素数を出す問題を解いてたのでとりあえずなんか作ってみる
-//	static void PrimeNumber(int targetCount)
-//	{
-//		for(var count = 2; targetCount > 1; count++ )
-//		{
-//			while((targetCount % count) == 0)
-//			{
-//				System.out.print(count + " , ");
-//				targetCount /= count;
-//			}
-//		}
-//	}
-//	
-//	static int Mul(int mulCount)
-//	{
-//		return mulCount * mulCount;
-//	}
-	
-	//確率の問題が何回も出てきてうっとうしかったので、書いた奴。
-	//さいころの問題キラーEX
-	public static void main(String[] ages)
+	//ソートアルゴリズムの復習(バブルソート、セレクトソート、インサートソート)
+	public static void main(String[] args)
 	{
-		int totalPossibilities = 0;
-        int validPossibilities = 0;
-
-        for (int dice1 = 1; dice1 <= 6; dice1++) {
-            for (int dice2 = 1; dice2 <= 6; dice2++) {
-                totalPossibilities++;
-                int sum = dice1 * dice2;
-                if (sum % 3 == 0) {
-                    validPossibilities++;
-                }
-            }
-        }
-
-        int gcd = gcd(validPossibilities, totalPossibilities);
-        int simplifiedValidPossibilities = validPossibilities / gcd;
-        int simplifiedTotalPossibilities = totalPossibilities / gcd;
-
-        System.out.println("Probability: " + simplifiedValidPossibilities + "/" + simplifiedTotalPossibilities);
-    }
-
-    // 最大公約数を求めるメソッド
-    private static int gcd(int a, int b) {
-        BigInteger bigA = BigInteger.valueOf(a);
-        BigInteger bigB = BigInteger.valueOf(b);
-        return bigA.gcd(bigB).intValue();
-    }
+		int[] array = {9,8,5,6,5,4,7,4,1,2,3,4};
+		
+		//BubleSort(array);
+		//SelectSort(array);
+		//InsertSort(array);
+		
+		for(var i = 0; i < array.length; i++)
+		{
+			System.out.print(array[i]);
+		}	
+	}
+	
+	//バブルソート
+	/*	static void BubleSort(int[] array)
+		{
+			for(var i = 0; i < array.length - 1; i++)
+			{	
+				for(var j = 0; j < array.length - 1; j++)
+			{
+					//値の入れ替え
+					if(array[j] > array[j + 1])
+					{
+						var changeNumber = array[j + 1];
+						array[j + 1] 		   = array[j];
+						array[j] 				   = changeNumber;
+					}
+				}
+			}
+		}*/
+	
+/*static void SelectSort(int[] array)
+{
+	int minIndex;
+	
+	for(var i = 0; i < array.length - 1; i++)
+	{
+		minIndex = i;
+		
+		var minValue = array[minIndex];
+		
+		for(var j = i ;  j  < array.length - 1; j++)
+		{
+			//要素の最小を探す
+			if(array[j + 1] < minValue)
+			{
+				minValue = array[j + 1];
+				minIndex = j + 1;
+			}
+		}
+		
+		if(i != minIndex)
+		{
+			var changeNumber = array[i];
+			array[i] 				   = array[minIndex];
+			array[minIndex]    = changeNumber;
+		}
+	}
+}*/
+	
+	
+	//インサートソート
+//	static void InsertSort(int[] array)
+/*	{
+		for(var i = 0; i < array.length; i++)
+		{
+			var insertNumber = array[i];
+			var insertPosition = i;
+			
+			//右にシフトさせるところ
+		for(var j = insertPosition - 1; j >= 0; j--) 
+			{				
+				if(insertNumber < array[j] )
+			{
+					array[j + 1] = array[j];
+					insertPosition--;
+				}
+			}
+			array[insertPosition] = insertNumber;
+		}
+	}	*/
 }
