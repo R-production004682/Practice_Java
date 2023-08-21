@@ -1,4 +1,4 @@
-public class Test
+public class Test01
 {
 	//ソートアルゴリズムの復習(バブルソート、セレクトソート、インサートソート)
 	public static void main(String[] args)
@@ -7,7 +7,7 @@ public class Test
 		
 		//BubleSort(array);
 		//SelectSort(array);
-		//InsertSort(array);
+		InsertSort(array);
 		
 		for(var i = 0; i < array.length; i++)
 		{
@@ -64,8 +64,8 @@ public class Test
 	
 	
 	//インサートソート
-//	static void InsertSort(int[] array)
-/*	{
+	static void InsertSort(int[] array)
+	{
 		for(var i = 0; i < array.length; i++)
 		{
 			var insertNumber = array[i];
@@ -82,5 +82,5 @@ public class Test
 			}
 			array[insertPosition] = insertNumber;
 		}
-	}	*/
+	}	
 }
