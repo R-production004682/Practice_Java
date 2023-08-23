@@ -15,7 +15,7 @@ public class Practice21
         System.out.println(target + "の個数：" + count(arr, target));
     }
     
-    static int count(int[][] array, int serchNumber)
+    static int count(int[][] array , int serchNumber)
     {
     	var resultNumber = 0;
     	

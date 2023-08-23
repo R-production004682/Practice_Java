@@ -12,6 +12,7 @@ public class EXTest10
 		primeFactorization(num);
 	}
 	
+	//素因数分解
 	static void primeFactorization(int num)
 	{
 		for(var i = 2; i < num; i++)

@@ -24,15 +24,15 @@ public class Practice10
 //		}
 		
 		//これを使う
-//		other:
-//		for(var primeNumber = 10; primeNumber <= 100; primeNumber++)
-//		{
-//			for(var number = 2; number < primeNumber; number++)
-//			{
-//				if((primeNumber % number) == 0) {continue other;}
-//			}
-//			System.out.println(primeNumber);
-//		}
+		other:
+		for(var primeNumber = 10; primeNumber <= 100; primeNumber++)
+		{
+			for(var number = 2; number < primeNumber; number++)
+			{
+				if((primeNumber % number) == 0) {continue other;}
+			}
+			System.out.println(primeNumber);
+		}
 		
 	}
 }
